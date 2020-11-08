@@ -1,26 +1,41 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <h1>Mystix Vue Client</h1>
+  <div id="nav">
+    <router-link to="/">Home</router-link> |
+    <router-link to="/tests">Tests</router-link> |
+    <router-link to="/about">About</router-link>
+  </div>
+  <router-view/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
 </script>
 
 <style>
-#app {
+* {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background: #222;
+  color: #f5f5f5;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+
+}
+
+a {
+    color: #8134b4;
+    text-decoration: none;
+}
+
+#nav {
+  padding: 20px;
+}
+
+#nav a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#nav a.router-link-exact-active {
+  color: #ad5cdf;
 }
 </style>
