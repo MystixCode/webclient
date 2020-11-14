@@ -21,7 +21,7 @@ export default {
     }
   },
   mounted () {
-    window.axios.get('/posts')
+    window.axios.get('https://jsonplaceholder.typicode.com/posts')
       .then(response => {
         this.testlist = response.data
         console.log(response)
